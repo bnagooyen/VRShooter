@@ -95,13 +95,35 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000011970537796, guid: 73dd6d8eeb581f14fad201ea19261819,
     type: 2}
   m_PrefabInternal: {fileID: 90842240}
---- !u!114 &71345487
+--- !u!114 &71345484
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71345482}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef7bd1312c03494ab37d1e1f2d88419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityTriggerPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ControllerEvents+ControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  unityTriggerReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ControllerEvents+ControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  triggerPressed: 0
+--- !u!114 &71345487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71345482}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79262e58ee6fa1041afab4dde942a798, type: 3}
   m_Name: 
@@ -122,6 +144,17 @@ MonoBehaviour:
   parent: {fileID: 0}
   pointerModel: {fileID: 0}
   addRigidBody: 0
+--- !u!114 &71345488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 71345482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be30e7351c121314aaab1c5cb25d83e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &90842240
 Prefab:
   m_ObjectHideFlags: 0
@@ -165,12 +198,12 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1555057091}
+      objectReference: {fileID: 1790671500}
     - target: {fileID: 33000012129162230, guid: 73dd6d8eeb581f14fad201ea19261819,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 304280401}
+      objectReference: {fileID: 150000897}
     - target: {fileID: 114000011536225590, guid: 73dd6d8eeb581f14fad201ea19261819,
         type: 2}
       propertyPath: m_RaycastTarget
@@ -181,6 +214,11 @@ Prefab:
       propertyPath: eyeRaycaster
       value: 
       objectReference: {fileID: 302078739}
+    - target: {fileID: 114000012327141516, guid: 73dd6d8eeb581f14fad201ea19261819,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73dd6d8eeb581f14fad201ea19261819, type: 2}
   m_IsPrefabParent: 0
@@ -189,13 +227,7 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010041051220, guid: 73dd6d8eeb581f14fad201ea19261819,
     type: 2}
   m_PrefabInternal: {fileID: 90842240}
---- !u!114 &302078739 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000012327141516, guid: 73dd6d8eeb581f14fad201ea19261819,
-    type: 2}
-  m_PrefabInternal: {fileID: 90842240}
-  m_Script: {fileID: 11500000, guid: ffebc012055484b4899e163803755608, type: 3}
---- !u!43 &304280401
+--- !u!43 &150000897
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -323,6 +355,12 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!114 &302078739 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000012327141516, guid: 73dd6d8eeb581f14fad201ea19261819,
+    type: 2}
+  m_PrefabInternal: {fileID: 90842240}
+  m_Script: {fileID: 11500000, guid: ffebc012055484b4899e163803755608, type: 3}
 --- !u!1 &531928836
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,13 +510,35 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012230020822, guid: 73dd6d8eeb581f14fad201ea19261819,
     type: 2}
   m_PrefabInternal: {fileID: 90842240}
---- !u!114 &992968194
+--- !u!114 &992968191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 992968189}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef7bd1312c03494ab37d1e1f2d88419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityTriggerPressed:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ControllerEvents+ControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  unityTriggerReleased:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: ControllerEvents+ControllerEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  triggerPressed: 0
+--- !u!114 &992968194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 992968189}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79262e58ee6fa1041afab4dde942a798, type: 3}
   m_Name: 
@@ -499,6 +559,17 @@ MonoBehaviour:
   parent: {fileID: 0}
   pointerModel: {fileID: 0}
   addRigidBody: 0
+--- !u!114 &992968195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 992968189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be30e7351c121314aaab1c5cb25d83e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1268373759 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000011536225590, guid: 73dd6d8eeb581f14fad201ea19261819,
@@ -551,35 +622,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4f35fa249b5008c44ac2998be6f82d4d, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &1555057091
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1641480593
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +685,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!21 &1790671500
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1975590310
 GameObject:
   m_ObjectHideFlags: 0
