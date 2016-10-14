@@ -10,6 +10,7 @@ public class LaserPointer : MonoBehaviour
         public uint flags;
         public float distance;
         public Transform target;
+        public RaycastHit hitInfo;
     }
 
     public delegate void PointerEventHandler(object sender, PointerEventArgs e);
@@ -22,10 +23,12 @@ public class LaserPointer : MonoBehaviour
     // Native C# Events are more efficient but can only be used from code
     public event PointerEventHandler PointerIn;
     public event PointerEventHandler PointerOut;
+    public event PointerEventHandler PointerOn;
 
     // Unity Events add a little overhead but listeners can be assigned via Unity editor
     public PointerEvent unityPointerIn = new PointerEvent();
     public PointerEvent unityPointerOut = new PointerEvent();
+
 
     // Member Variables
     public Color color = new Color(0.0F, 1.0F, .01F);
@@ -134,6 +137,25 @@ public class LaserPointer : MonoBehaviour
         Ray raycast = new Ray(transform.position, transform.forward);
         RaycastHit hitInfo;
         bool hasTarget = Physics.Raycast(raycast, out hitInfo);
+
+        if (hasTarget)
+        {
+            PointerEventArgs argsOn = new PointerEventArgs();
+            if (controller != null)
+            {
+                argsOn.controllerIndex = controller.controllerIndex;
+            }
+
+            argsOn.distance = hitInfo.distance;
+            argsOn.flags = 0;
+            argsOn.target = hitInfo.transform;
+            argsOn.hitInfo = hitInfo;
+            OnPointerOn(argsOn);
+           
+
+
+
+        }
         
         // Pointer moved off collider
         if (previousContact && previousContact != hitInfo.transform)
@@ -146,6 +168,7 @@ public class LaserPointer : MonoBehaviour
             argsOut.distance = 0f;
             argsOut.flags = 0;
             argsOut.target = previousContact;
+            argsOut.hitInfo = hitInfo;
             OnPointerOut(argsOut);
             previousContact = null;
         }
@@ -161,6 +184,7 @@ public class LaserPointer : MonoBehaviour
             argsIn.distance = hitInfo.distance;
             argsIn.flags = 0;
             argsIn.target = hitInfo.transform;
+            argsIn.hitInfo = hitInfo;
             OnPointerIn(argsIn);
             previousContact = hitInfo.transform;
         }
@@ -199,6 +223,16 @@ public class LaserPointer : MonoBehaviour
             PointerOut(this, e);
         }
         unityPointerOut.Invoke(e);
+    }
+
+    //Event publisher 
+    public virtual void OnPointerOn(PointerEventArgs e)
+    {
+        if (PointerOn != null)
+        {
+            PointerOn(this, e);
+        }
+
     }
 
 }

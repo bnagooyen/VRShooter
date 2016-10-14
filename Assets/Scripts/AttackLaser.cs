@@ -11,7 +11,7 @@ public class AttackLaser : MonoBehaviour {
     private ControllerEvents controllerEvents;
 
     private Color laserDefaultColor;
-    private float damagePerFrame = 100f;
+    private float damagePerFrame = .5f;
     private bool damage = false;
 
     //need a reference for what is being targeted/attacked 
@@ -77,6 +77,9 @@ public class AttackLaser : MonoBehaviour {
         laserPointer.pointerModel.GetComponent<MeshRenderer>().material.color = laserDefaultColor;
         targetHealth = null;
         damage = false;
+
+       
+
     }
 
 
